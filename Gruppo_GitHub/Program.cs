@@ -12,6 +12,7 @@ namespace Gruppo_GitHub
         {
             string risultato;
             int num = 255;
+            risultato = "";
         }
     }
 }
