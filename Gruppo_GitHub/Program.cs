@@ -10,7 +10,7 @@ namespace Gruppo_GitHub
     {
         static void Main(string[] args)
         {
-            //inizializzano le variabili
+            //si inizializzano le variabili
             string risultato="";
             int num = 255;
             int ValBase;
@@ -52,7 +52,7 @@ namespace Gruppo_GitHub
             {
                 risultato = Convert.ToString(num) + risultato;
             }
-            Console.WriteLine($"il numero binario è {risultato}");
+            Console.WriteLine($"il numero {num} in base {ValBase} è {risultato}");
 
             Console.ReadLine();
         }
