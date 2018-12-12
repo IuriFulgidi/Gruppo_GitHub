@@ -11,6 +11,7 @@ namespace Gruppo_GitHub
         static void Main(string[] args)
         {
             string risultato;
+            int num = 255;
         }
     }
 }
