@@ -13,6 +13,7 @@ namespace Gruppo_GitHub
             //inizializzano le variabili
             string risultato="";
             int num = 255;
+            int ValBase;
 
             //si chiede all' utente il numero da convertire
             do
@@ -26,17 +27,34 @@ namespace Gruppo_GitHub
             }
             while (num < 0);
 
-            //si converte il numero
-            while(num>1)
+            //si chiede all' utente la base
+            do
             {
-                int resto = num % 2;
+                Console.WriteLine("inserire la base tra 2,8 e 16");
+                ValBase = Convert.ToInt32(Console.ReadLine());
+                if (ValBase!=2 && ValBase != 8 && ValBase != 16)
+                {
+                    Console.WriteLine("inserire un numero tra 2,8,16");
+                }
+            }
+            while (ValBase != 2 && ValBase != 8 && ValBase != 16);
+
+            //si converte il numero
+            while (num>1)
+            {
+                int resto = num % ValBase;
                 risultato = Convert.ToString(resto) + risultato;
-                num = num / 2;
+                num = num / ValBase;
             }
 
             //si stampa il risultato
-            risultato = Convert.ToString(num) + risultato;
+            if (num != 0)
+            {
+                risultato = Convert.ToString(num) + risultato;
+            }
             Console.WriteLine($"il numero binario è {risultato}");
+
+            Console.ReadLine();
         }
     }
 }
